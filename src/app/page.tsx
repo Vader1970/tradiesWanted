@@ -5,9 +5,9 @@ import { Hero } from "@/components/Hero";
 const LoadingPlaceholder = () => <div className='min-h-[300px] animate-pulse bg-muted' />;
 
 // Dynamic imports for below-fold sections
-// const AboutSection = dynamic(() => import("@/components/AboutSection"), {
-//   loading: () => <LoadingPlaceholder />,
-// });
+const AboutSection = dynamic(() => import("@/components/AboutSection"), {
+  loading: () => <LoadingPlaceholder />,
+});
 
 // const CurrentProjectsSection = dynamic(
 //   () => import("@/components/CurrentProjectsSection"),
@@ -35,9 +35,9 @@ export default function Home() {
   return (
     <>
       <Hero />
-      {/* <Suspense fallback={<LoadingPlaceholder />}>
+      <Suspense fallback={<LoadingPlaceholder />}>
         <AboutSection />
-      </Suspense> */}
+      </Suspense>
       {/* <Suspense fallback={<LoadingPlaceholder />}>
         <TradesNeededSection />
       </Suspense>
