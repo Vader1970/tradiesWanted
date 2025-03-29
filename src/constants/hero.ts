@@ -1,19 +1,15 @@
-import { HeroBaseProps } from "@/types/hero";
-import heroImage from "../../public/images/hero-image.webp";
+import { HeroPropsBase } from "@/types/hero";
 
-export const HeroDefaults = {
+export const HeroDefaults: HeroPropsBase = {
   heading: "CVI Projects Limited",
   description:
     "We're seeking qualified trades to bid on high-quality building projects and fit-outs throughout North Canterbury and Christchurch.",
   buttons: [
-    {
-      title: "Trade Work Available",
-      variant: "outline",
-      href: "#trades",
-    },
+    { title: "Apply for Contract Work", variant: "default", href: "#contact" },
+    { title: "Trade Work Available", variant: "outline", href: "#services" },
   ],
   image: {
-    src: heroImage,
+    src: "/images/hero-image.webp",
     alt: "hero image",
   },
-} as const satisfies HeroBaseProps;
+};
