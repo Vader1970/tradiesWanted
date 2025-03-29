@@ -1,6 +1,6 @@
 import { Suspense } from "react";
 import dynamic from "next/dynamic";
-import { Hero } from "@/components/Hero";
+// import { Hero } from "@/components/Hero";
 
 const LoadingPlaceholder = () => <div className='min-h-[300px] animate-pulse bg-muted' />;
 
@@ -34,7 +34,7 @@ const LoadingPlaceholder = () => <div className='min-h-[300px] animate-pulse bg-
 export default function Home() {
   return (
     <>
-      <Hero />
+      {/* <Hero /> */}
       {/* <Suspense fallback={<LoadingPlaceholder />}>
         <AboutSection />
       </Suspense>
