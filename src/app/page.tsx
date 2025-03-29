@@ -9,6 +9,14 @@ const AboutSection = dynamic(() => import("@/components/AboutSection"), {
   loading: () => <LoadingPlaceholder />,
 });
 
+const WorkWithUs = dynamic(() => import("@/components/WorkWithUs"), {
+  loading: () => <LoadingPlaceholder />,
+});
+
+const TradesSections = dynamic(() => import("@/components/TradesNeededSection"), {
+  loading: () => <LoadingPlaceholder />,
+});
+
 // const CurrentProjectsSection = dynamic(
 //   () => import("@/components/CurrentProjectsSection"),
 //   {
@@ -37,6 +45,12 @@ export default function Home() {
       <Hero />
       <Suspense fallback={<LoadingPlaceholder />}>
         <AboutSection />
+      </Suspense>
+      <Suspense fallback={<LoadingPlaceholder />}>
+        <WorkWithUs />
+      </Suspense>
+      <Suspense fallback={<LoadingPlaceholder />}>
+        <TradesSections />
       </Suspense>
       {/* <Suspense fallback={<LoadingPlaceholder />}>
         <TradesNeededSection />
